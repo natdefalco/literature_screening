@@ -54,5 +54,32 @@ authors, abstract, year, and URL, and saves the results in an Excel file.
 - You can filter, clean, or deduplicate the Excel file afterward using Excel or Python.
 - For large-scale use, consider using batching or adding delays to avoid rate limits.
 
-Author: [Your Name]
+🧠 How to Structure Your Search Query
+
+You can use Boolean operators to refine your literature search:
+
+🔤 Examples:
+    SEARCH_QUERY = 'desalination AND energy'
+    SEARCH_QUERY = '("groundwater recharge" OR "aquifer storage")'
+    SEARCH_QUERY = '("flow dynamics" AND carbonate AND NOT petroleum)'
+    SEARCH_QUERY = '(wetlands OR lakes OR ponds) AND "methane emissions"'
+
+📝 Syntax Tips:
+- Use **double quotes** for exact phrases: "greenhouse gas"
+- Use **AND**, **OR**, **NOT** (uppercase recommended)
+- Use **parentheses** to group terms and control logic
+
+🌐 Supported by:
+- Springer, CORE, arXiv, Semantic Scholar
+- Scopus (Elsevier), OpenAlex, PubMed, Crossref
+
+⚠️ Final query must be encoded:
+    from urllib.parse import quote
+    ENCODED_QUERY = quote(SEARCH_QUERY)
+
+💡 Feel free to experiment. Most APIs support full Boolean logic, especially Springer, CORE, and Scopus.
+"""
+
+
+Author: Natalie De Falco
 """
